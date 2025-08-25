@@ -47,7 +47,7 @@ public class ScannerEx1 {
         int num2 = sc.nextInt();
 
         System.out.print("실수 입력 : ");
-        int num3 = sc.nextInt();
+        double num3 = sc.nextDouble();
 
         System.out.print("단어 입력(2개) : "); // 사과 바나나 엔터
         String word1 = sc.next();
