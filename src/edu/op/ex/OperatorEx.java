@@ -122,4 +122,38 @@ public class OperatorEx {
         System.out.printf("%d 은/는 %s입니다.", input, result);
     }
 
+    /*
+    * [홀 짝 검사기 V2]
+    * 입력받은 정수가 홀수 또는 짝수 또는 0인지 판별
+    * 정수 입력 : 0
+    * 0 입니다.
+    * -------------
+    * 정수 입력 : 4
+    * 짝수 입니다.
+    * -------------
+    * 정수 입력 : 7
+    * 홀수 입니다.
+    *
+    * 변수이름 : sc,
+    *           int = input
+    *           boolean = isZero isTrue
+    *           삼항연산자
+    *           String result "짝수" "홀수"
+    * */
+    public void method4(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수 입력 : ");
+        int input  = sc.nextInt();
+        /*
+        boolean isZero = (input == 0); // 0인지 검사
+
+        boolean isTrue = (input % 2 == 0);
+        String result = isZero ? "0" : isTrue ? "짝수" : "홀수"; // 이중 삼항 연산자
+        // 0이 맞으면 0, 0이 아니면 삼항연산자를 통해 짝수 홀수 판별 후 출력
+        */
+        // 한 번에 써주기!!
+        // 최종 결과로 input을 1차에서 0인지 확인하고 아니라면 확인해서 짝수인지 홀수 인지 판별
+        String result = (input == 0) ? "0" : ((input % 2 == 0) ? "짝수" : "홀수");
+        System.out.printf(result + " 입니다.");
+    }
 }
