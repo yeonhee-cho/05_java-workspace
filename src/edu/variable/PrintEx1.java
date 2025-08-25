@@ -15,7 +15,7 @@ public class PrintEx1 {
          *
          * - 첫 번째 매개 변수 ""
          * - 패턴이 적용된 문자열 작성
-         * - 패턴 졸류
+         * - 패턴 종류
          *
          * %d : 정수(byte, short, int)
          * %c : 문자(char)
