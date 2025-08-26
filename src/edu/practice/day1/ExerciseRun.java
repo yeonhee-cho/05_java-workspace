@@ -1,9 +1,4 @@
-package edu.practice;
-import edu.practice.Exercise1;
-import edu.practice.Exercise2;
-import edu.practice.Exercise3;
-import edu.practice.Exercise4;
-import edu.practice.Exercise5;
+package edu.practice.day1;
 
 public class ExerciseRun {
     public static void main(String[] args) {
@@ -12,6 +7,10 @@ public class ExerciseRun {
         Exercise3 ex3 = new Exercise3();
         Exercise4 ex4 = new Exercise4();
         Exercise5 ex5 = new Exercise5();
-        ex1.method1();
+        // ex1.method1();
+        // ex2.method2();
+        // ex3.method3();
+        // ex4.method4();
+        ex5.method5();
     }
 }
