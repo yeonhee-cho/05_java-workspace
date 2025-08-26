@@ -27,6 +27,14 @@ public class Exercise2 {
         System.out.printf("%d + %d = %d\n", num1, num2, add);
         System.out.printf("%d - %d = %d\n", num1, num2, sub);
         System.out.printf("%d * %d = %d\n", num1, num2, mul);
+        System.out.printf("%d / %d = %.2f\n", num1, num2, div);
+        /*
+        * %d 가 아니라 %.2f를 사용해야 함
+        * 오류 내용 : Exception in thread "main" java.util.IllegalFormatConversionException: d != java.lang.Double
+        * */
+
+        // 한 번에 쓰기
+        System.out.printf("=== 계산 결과 ===\n 더하기 : %d, 빼기 : %d, 곱하기 : %d, 나누기 : %.2f", add, sub, mul, div);
 
         System.out.println();
     }

@@ -10,27 +10,27 @@ public class Exercise4 {
     //평균: 87.67점
     //학점: B
     public void method4(){
+        // 변수 이름을 선언하거나 변수이름에 데이터를 넣는 것은 
+        // 메서드 내부에 작성하지 않고 보통은 class 파일이름 바로 아래 작성
+        int korean, english, math;
+        double average;
+
         Scanner sc=new Scanner(System.in);
         System.out.print("국어 점수: ");
-        int korean = sc.nextInt();
+        korean = sc.nextInt();
         System.out.print("영어 점수: ");
-        int english = sc.nextInt();
+        english = sc.nextInt();
         System.out.print("수학 점수: ");
-        int math = sc.nextInt();
+        math = sc.nextInt();
 
-        double average = (korean + english + math)/3.0;
+        average = (korean + english + math)/3.0;
         char grade;
-        if(average >= 90){
-            grade = 'A';
-        } else if(average >= 80){
-            grade = 'B';
-        } else if(average >= 70){
-            grade = 'C';
-        } else if(average >= 60){
-            grade = 'D';
-        } else {
-            grade = 'E';
-        }
+        if(average >= 90) grade = 'A';
+        if(average >= 90) grade = 'B';
+        else if(average >= 80) grade = 'C';
+        else if(average >= 70) grade = 'D';
+        else if(average >= 60) grade = 'E';
+        else grade = 'F';
 
         System.out.printf("국어 점수: %d\n영어 점수: %d\n수학 점수: %d\n\n평균: %.2f점\n학점: %s", korean, english, math, average, grade);
     }
