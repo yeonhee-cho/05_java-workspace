@@ -32,6 +32,16 @@ public class Exercise4 {
         else if(average >= 60) grade = 'E';
         else grade = 'F';
 
+        // TODO
+//        if (average > 90) grade = 'A';
+//        else if (average < 90) grade = 'B';
+//        else if (average < 80) grade = 'C';
+//        else if (average < 70) grade = 'D';
+//        else if (average < 60) grade = 'E';
+//        else  grade = 'F';
+
+
+
         System.out.printf("국어 점수: %d\n영어 점수: %d\n수학 점수: %d\n\n평균: %.2f점\n학점: %s", korean, english, math, average, grade);
     }
 }
