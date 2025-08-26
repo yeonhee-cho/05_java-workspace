@@ -20,6 +20,8 @@ public class LoopRun {
         // ex3.method3();
         // ex3.method4();
         // ex3.method5();
-        ex3.method6();
+        // ex3.method6();
+        // ex3.method7();
+        ex3.method8();
     }
 }
