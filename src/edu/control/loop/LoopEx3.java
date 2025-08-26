@@ -30,4 +30,35 @@ public class LoopEx3 {
              */
         }
     }
+
+    /*
+    * while(조건식) : 끝이 확실하지 않은 반복에 사용
+    *
+    * -1이 입력될 때까지 정수를 계속 입력받아
+    * 입력받은 수의 합계를 구하기
+    *
+    * 변수이름
+    * int sum = 0; 합계 누적용 변수
+    * int input = 0; 입력 값을 저장할 변수
+    *
+    * while(조건이 참일 경우에만 지속적으로 실행){
+    *
+    * }
+    * method2()
+    * */
+    public void method2(){
+        int sum = 0;
+        int input = 0;
+        System.out.println("-1을 입력하면 종료됩니다.");
+
+        while(input != -1){ // 입력 값이 -1이 아니면 반복 맞으면 종료
+            // System.out.println("-1을 입력하면 종료됩니다."); // 여기에 두면 계속 반복
+            System.out.print("한 자리 정수 입력 : ");
+            input = sc.nextInt();;
+            if(input != -1){
+                sum += input; // -1이 아닐 경우에만 숫자 더하기
+            }
+        }
+        System.out.println("-1을 입력하기 전까지 숫자 합계 : " + sum);
+    }
 }
