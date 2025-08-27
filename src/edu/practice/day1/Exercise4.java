@@ -32,7 +32,7 @@ public class Exercise4 {
         else if(average >= 60) grade = 'E';
         else grade = 'F';
 
-        // TODO
+        // NOTE 이러면 안나와요
 //        if (average > 90) grade = 'A';
 //        else if (average < 90) grade = 'B';
 //        else if (average < 80) grade = 'C';
