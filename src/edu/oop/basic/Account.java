@@ -88,7 +88,7 @@ public class Account {
     * 리터럴 형태로 변수 이름에 직접적으로 작성된 데이터를 전달할 떄 사용하는 메서드
     * return에서 작성되어 있는 변수 명칭의 자료형은 public 옆에 존재하는 위치에 작성
     *
-    * public 리턴할변수이름의자료형  getqustndlfma(){
+    * public 리턴할변수이름의자료형  get변수이름(){
     *   return 데이터를전달할변수이름;
     * }
     * */
