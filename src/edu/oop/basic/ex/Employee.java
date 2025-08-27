@@ -134,7 +134,7 @@ public class Employee {
     * */
     public void retirement(){
         int retirement = salary * workYears;
-        System.out.printf("%s님의 예상 퇴직금 : %,d만원(연봉%,d만원 x 근무년수 %d년) : \n", getName(), retirement, getSalary(), getWorkYears());
+        System.out.printf("%s님의 예상 퇴직금 : %,d만원(연봉%,d만원 x 근무년수 %d년) \n", getName(), retirement, getSalary(), getWorkYears());
     }
 
     /*
