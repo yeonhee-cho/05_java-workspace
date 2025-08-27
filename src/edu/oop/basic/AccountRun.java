@@ -55,5 +55,22 @@ public class AccountRun {
         System.out.println(a2.getAccountNumber());
         System.out.println(a2.getBalance());
         System.out.println(a2.getPassword());
+
+        System.out.println(); // 띄어쓰기
+
+        // 각 계좌에 입금
+        // 계좌 잔액에서 long 타입 정도의 숫자 금액이 들어올 수 있을지는 모르겠지만
+        // 데이터 문제 발생을 최소화 하기 위해 long 작성
+        a1.deposit(10000); // 변수에서 자료형 long
+        a1.deposit(2345L); // 데이터를 long 타입으로 저장하겠다.
+
+        a2.deposit(5000);
+        a2.deposit(10000);
+
+        System.out.println("==============================");
+        // 각 계좌에서 출금
+        a1.withdraw("1234",200000); // 비밀번호 불일치
+        a1.withdraw("7890",200000); // 잔액이 부족합니다.
+        a1.withdraw("7890",5000); // 출금 성공
     }
 }
