@@ -41,5 +41,19 @@ public class AccountRun {
         String a1Password = a1.getPassword();
         System.out.println(a1Num);
         System.out.println(a1Password);
+
+        // 필수 생성자는 활용하여 데이터 저장하고 저장된 데이터 확인
+        // Account a2 = new Account("강말숙"); // 오류 확인 : 생성자 'Account(String)'을(를) 해결할 수 없습니다
+
+        // 필수 생성자는 Account 클래스에서 활용할 데이터를 외부에서 매개변수 데이터로 필히 넣어줘야하는 매개변수를 작성한 공간
+        // 매개변수를 작성한 공간으로 Account() 소괄호 내부에 작성한 매개변수 순서대로 데이터 작성
+        // 데이터 순서가 일치하지 않으면 에러 발생하므로 순서에 맞게 작업해줘야 함
+        //        public Account(String name,   String accountNumber,      long balance, String password)
+        Account a2 = new Account("강말숙", "111-222-333",10000,"7777");
+        System.out.println("=== a2의 계좌정보 ===");
+        System.out.println(a2.getName());
+        System.out.println(a2.getAccountNumber());
+        System.out.println(a2.getBalance());
+        System.out.println(a2.getPassword());
     }
 }
