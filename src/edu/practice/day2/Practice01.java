@@ -14,7 +14,7 @@ public class Practice01 {
         * 3부터 10까지의 짝수
         * 4 6 8 10
         */
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("첫 번째 숫자: ");
         int input1 = sc.nextInt();
         System.out.print("두 번째 숫자: ");
@@ -29,5 +29,6 @@ public class Practice01 {
                 System.out.print(i + " ");
             }
         }
+        System.out.println(); // int Enter처리
     }
 }

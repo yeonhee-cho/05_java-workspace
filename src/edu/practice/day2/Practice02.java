@@ -7,7 +7,8 @@ import java.util.Scanner;
 * */
 public class Practice02 {
     public void method2() {
-        /*높이를 입력하세요: 5
+        /*
+        * 높이를 입력하세요: 5
         *
         * *
         * **
@@ -19,15 +20,13 @@ public class Practice02 {
         Scanner sc = new Scanner(System.in);
         System.out.print("높이를 입력하세요: ");
         int height = sc.nextInt();
-
+        System.out.println(); // int 남은 버퍼 처리
+        // 높이만큼 별의 개수를 출력
         for (int i = 1; i <= height; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-
-
     }
-
 }
