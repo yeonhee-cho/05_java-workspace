@@ -14,6 +14,7 @@ public class StaticTestRun {
         System.out.println("=== nationalCode 변경 후 ===");
         System.out.println("k1의 nationalCode : " + k1.nationalCode);
         System.out.println("k2의 nationalCode : " + k2.nationalCode);
+
         /*
         * static 변수는 공용(공유) 변수!
         * 객체가 100개 생성되어도 변수 하나로 모두가 공유
