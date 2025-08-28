@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Practice10 {
     public void method10(){
         /*
-        * TODO * 왜 중간에 자꾸 5개 이상이 나오는지 다시 확인 필요
+        * // TODO * 왜 중간에 자꾸 5개 이상이 나오는지 다시 확인 필요
         *  === 간단 로또 번호 생성기 ===
         * 생성된 번호: 3 7 12 18 20
         * 다시 생성하시겠습니까? (y/n): y
@@ -23,13 +23,14 @@ public class Practice10 {
         System.out.print("생성된 번호: ");
         while(true) {
             for (int i = 0; i < 5; i++) {
+                // 1~20 범위의 숫자 생성
                 randomNum = (int) (Math.random() * 20) + 1;
                 lotto[i] = randomNum;
                 // 중복 제거
                 if(i > 0){
                     if(lotto[i] == lotto[i-1]){
                         isDuplicate = true;
-                        i--;
+                        // i--;
                     }
                 }
                 System.out.print(lotto[i] + " ");
