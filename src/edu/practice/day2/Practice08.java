@@ -24,20 +24,23 @@ public class Practice08 {
         int min, max;
         double average;
 
+        System.out.print("5명의 성적을 입력하세요. : ");
+        // 성적 입력받기
         for (int i = 0; i < scores.length; i++) {
             System.out.printf("%d번 학생: ", i+1);
             scores[i] = sc.nextInt();
             total += scores[i];
         }
-        average = total / scores.length;
 
-        min = 100;
-        max = 0;
+
+        average = (double)total / scores.length;
+
+        min = scores[100];
+        max = scores[0];
+
         for (int i = 0; i < scores.length; i++) {
-            if (scores[i] < min) {
-                min = Math.min(scores[i], min);
-                max = Math.max(scores[i], max);
-            }
+            min = Math.min(scores[i], min);
+            max = Math.max(scores[i], max);
         }
 
         System.out.println();

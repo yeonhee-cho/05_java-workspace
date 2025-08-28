@@ -48,7 +48,7 @@ public class PracticeRun {
         System.out.println();
         s2.displayInfo();
     }
-
+/*
     public static void testPractice2() {
         System.out.println("\n=== 문제 2: 도서 관리 테스트 ===");
 
@@ -131,4 +131,6 @@ public class PracticeRun {
         warrior.attack("스킬공격");
         warrior.attack("스킬공격");
     }
+*/
+
 }
