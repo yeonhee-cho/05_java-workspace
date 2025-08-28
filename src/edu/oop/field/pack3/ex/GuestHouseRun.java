@@ -14,7 +14,7 @@ public class GuestHouseRun {
 
         guest2.setGuestName("박배낭");
         guest2.setCheckInDate("2025-08-28");
-        guest1.setRoomNumber(202);
+        guest2.setRoomNumber(202);
 
         // static 변수 확인 ( totalCount 같은 경우는 최초 1회 실행이기 때문에 guest1이라고 작성해서 호출하는 대신
         // GuestHoude라는 클래스 이름으로 호출하는 것이 맞으므로 자동완성에서 누락되는 것이 맞음)
