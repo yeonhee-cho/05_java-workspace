@@ -10,14 +10,16 @@ public class Practice04 {
         Scanner sc=new Scanner(System.in);
         System.out.print("숫자를 입력하세요: ");
         int number = sc.nextInt();
-        boolean isPrime;
+        boolean isPrime = true;
         for (int i = 2; i <= number; i++) {
-            // TODO
-//            if(i%) {
-//                System.out.printf("%d은 소수입니다.\n", number);
-//            } else{
-//                if(number % i == 0) isPrime = false; break;
-//            }
+            if (number % i == 0){
+                isPrime = false;
+                System.out.printf("%d는 소수가 아닙니다.\n", number);
+                break;
+            }
+        }
+        if (isPrime) {
+            System.out.printf("%d는 소수입니다.\n", number);
         }
     }
 }

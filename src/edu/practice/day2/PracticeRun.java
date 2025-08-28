@@ -15,13 +15,13 @@ public class PracticeRun {
         // ex1.method1();
         // ex2.method2();
         // ex3.method3();
-        ex4.method4();
+        // ex4.method4();
         // ex5.method5();
         // ex6.method6();
         // ex7.method7();
-         ex8.method8();
-         ex9.method9();
-         ex10.method10();
+        // ex8.method8();
+        // ex9.method9();
+        ex10.method10();
         /*
         * ex.method7(); 츨력 결과
         * 안녕하세요. 2025년 8월 입니다.
