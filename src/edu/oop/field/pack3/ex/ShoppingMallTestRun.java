@@ -6,7 +6,7 @@ package edu.oop.field.pack3.ex;
 * return
 *
 * static 최초 1회 초기화 공유 위해
-* final 변경 안하는 것
+* final 변경 안하는 것 상수
 *
 * setter(저장) getter(전달) 사용하는 이유 "캡슐화" 처리
 *
