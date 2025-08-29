@@ -27,7 +27,7 @@ public class MatchingService {
             switch (input) {
                 case 1: registerNewMember(); break;
                 case 2: viewMemberInfo(); break;
-                case 3: updateMemberDetails(정); break;
+                case 3: updateMemberDetails(); break;
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
                     return;
