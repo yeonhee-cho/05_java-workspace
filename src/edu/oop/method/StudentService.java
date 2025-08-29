@@ -54,7 +54,8 @@ public class StudentService {
                         System.out.println("조회되는 학생의 정보가 존재하지 않습니다.");
                         System.out.println("학생 등록을 시작하겠습니다.");
                         // 학생 등록을 위한 메서드 호출
-                        std2 = createStudent();
+                        std2 = createStudent(); // return으로 가져 올 아래 생성자 객체 대신 기능 명칭 작성해준 것
+                        // std2 = new Student(createName, createNumber, createGender);
                         System.out.println(studentInform(std2)); // 등록이 잘 되었는지 학생 정보 확인
 
                     }
@@ -105,6 +106,7 @@ public class StudentService {
                         studentInform(std2);
                     }
                     break;
+
                 case 5: // 관리자 페이지에서 html 역량 tab
                     System.out.println("html 역량을 수정하는 공간입니다.");
 
@@ -120,6 +122,16 @@ public class StudentService {
                     }
                     break;
 
+                case 6:
+                    // Java 역량 비교에 대한 결과 확인
+                    System.out.println(compareJava(std1,std2));
+                    break;
+
+                case 7:
+                    // HTML 역량 비교에 대한 결과 확인
+                    System.out.println(compareHtml(std1,std2));
+                    break;
+
                 case 0:
                     System.out.println("프로그램을 종료합니다.");
                     return;
@@ -131,8 +143,8 @@ public class StudentService {
     }
 
     /**
-    *
-    * @return
+    *  학생 정보를 입력 받아 생성된 Student 객체를 반ghks
+    * @return 생성된 Student 객체 주소
     */
     private Student createStudent(){
         System.out.print("이름 : ");
@@ -147,6 +159,7 @@ public class StudentService {
        // sc.next().charAt(0); sc.next()로 입력받은 문자열 중에서
         // 0번째 인덱스 번째 문자 하나를 반환 받아 createGender 변수에 저장
        return new Student(createName, createNumber, createGender);
+       // return Student std2 = new Student(createName, createNumber, createGender);
     }
 
     // private void studentInform(Student 특정학생){
@@ -275,6 +288,47 @@ public class StudentService {
         }
         student.setHtml(result);
     }
+
+    /**
+     * 매개변수로 전달 받은 두 Student의 Java 점수 비교하기
+     * @param student1
+     * @param student2
+     * @return 비교 결과 문자열로 확인
+     */
+    private String compareJava(Student student1, Student student2){
+        if(student1 == null && student2 == null){
+            return "등록된 학생의 정보가 조회되지 않습니다.";
+        }
+        // 두 학생의 점수 비교
+        if(student1.getJava() == student2.getJava()){
+            return "학생의 점수가 같습니다.";
+        } else if (student1.getJava() > student2.getJava()) {
+            return student1.getName() + " 의 점수가 더 높습니다.";
+        } else {
+            return student2.getName() + "의 점수가 더 높습니다.";
+        }
+    }
+
+    /**
+     * 매개변수로 전달 받은 두 Student의 HTML 점수 비교하기
+     * @param student1
+     * @param student2
+     * @return 비교 결과 문자열로 확인
+     */
+    private String compareHtml(Student student1, Student student2){
+        if(student1 == null && student2 == null){
+            return "등록된 학생의 정보가 조회되지 않습니다.";
+        }
+        // 두 학생의 점수 비교
+        if(student1.getHtml() == student2.getHtml()){
+            return "학생의 점수가 같습니다.";
+        } else if (student1.getHtml() > student2.getHtml()) {
+            return student1.getName() + " 의 점수가 더 높습니다.";
+        } else {
+            return student2.getName() + "의 점수가 더 높습니다.";
+        }
+    }
+
 }
 
 // 스코프 :  중괄호 형태{}로 쓰는 변수
