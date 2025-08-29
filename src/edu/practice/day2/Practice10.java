@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Practice10 {
     public void method10(){
         /*
-        * // TODO * 왜 중간에 자꾸 6개 이상이 나오는지 다시 확인 필요
         *  === 간단 로또 번호 생성기 ===
         * 생성된 번호: 3 7 12 18 20
         * 다시 생성하시겠습니까? (y/n): y
