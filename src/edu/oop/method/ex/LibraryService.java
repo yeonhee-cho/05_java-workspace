@@ -119,7 +119,6 @@ public class LibraryService {
                     System.out.println("최대 도서 대출 권 수 : " + LibraryMember.MAX_BORROW_BOOKS + "권");
                     System.out.println("최소 가입 연령 : " + LibraryMember.MIN_AGE_LIMIT + "세");
 
-
                     break;
             }
         }
