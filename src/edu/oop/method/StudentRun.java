@@ -10,3 +10,4 @@ public class StudentRun {
         new StudentService().displayMenu();
     }
 }
+// Ctrl + Shift + /
