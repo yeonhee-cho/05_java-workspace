@@ -9,10 +9,10 @@ public class PracticeRun {
         System.out.println("=== Java 4일차 OOP 실습문제 실행 ===");
 
         // 문제 1: 학생 클래스
-         testPractice1();
+        // testPractice1();
 
         // 문제 2: 도서관 도서 관리
-        // testPractice2();
+        testPractice2();
 
         // 문제 3: 카페 주문 관리
         // testPractice3();
@@ -48,9 +48,9 @@ public class PracticeRun {
         System.out.println();
         s2.displayInfo();
     }
-/*
+
     public static void testPractice2() {
-        System.out.println("\n=== 문제 2: 도서 관리 테스트 ===");
+        System.out.println("\n=== 도서 관리 시스템 ===");
 
         Book book = new Book("자바의 정석", "남궁성", "978-89-7914-726-9");
 
@@ -71,7 +71,7 @@ public class PracticeRun {
         System.out.println("김자바님이 '" + book.getTitle() + "' 반납");
         System.out.println("결과: " + book.returnBook());
     }
-
+/*
     public static void testPractice3() {
         System.out.println("\n=== 문제 3: 카페 주문 관리 테스트 ===");
 
