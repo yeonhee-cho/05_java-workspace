@@ -1,4 +1,5 @@
-package edu.inheritance;
+package edu.inheritance.ex0;
+
 // 직원 상속 받아서 아래 코드 완성!
 public class 매니저 extends 직원 {
     private int teamSize;
