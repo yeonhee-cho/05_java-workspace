@@ -66,12 +66,12 @@ public class 개발자 extends 직원 {
         을 여러 번 작성하지 않고, 직원 클래스에 작성한 코드를 호출해서 활용
         활용 후 개발자 클래스에서 원하는 출력문을 추가로 작성
         */
-        System.out.println(geteName() +"개발자가 " + getComputer() + "로 코딩을 합니다.");
+        System.out.println(geteName() +" 개발자가 " + getComputer() + "로 코딩을 합니다.");
     }
 
     // 아래에는 직원 클래스에서 다른 직원까지 공통으로 사용하지 않고, 오직 개발자 클래스에서만 사용하는 기능 추가
     public void codeReview(){
-        System.out.println(geteName() + "개발자가 코드 리뷰를 진행합니다.");
+        System.out.println(geteName() + " 개발자가 코드 리뷰를 진행합니다.");
     }
 
 }

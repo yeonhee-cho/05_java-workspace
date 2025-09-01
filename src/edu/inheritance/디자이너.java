@@ -48,6 +48,6 @@ public class 디자이너 extends 직원 {
     public void work(){
         // super.work();는 부모에 작성된 기능들을 추가로 사용하고자 할 때 작성
         // 기능에서는 super.기능명칭()을 작성하는 것이 필수가 아님
-        System.out.println(geteName() + "디자이너가 " + getDesignTool() + "을(를) 활용해 디자인합니다.");
+        System.out.println(geteName() + " 디자이너가 " + getDesignTool() + "을(를) 활용해 디자인합니다.");
     }
 }
