@@ -27,20 +27,26 @@ public class Bird extends Animal {
     // Animal 클래스에서 작성한 기능을 재사용
     @Override
     public void makeSound() {
-        System.out.println(getName() + "이(가) 짹짹 웁니다.");
+        System.out.println(getName() + " 이(가) 짹짹 웁니다.");
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + "이(가) 날아다닙니다.");
+        System.out.println(getName() + " 이(가) 날아다닙니다.");
+    }
+
+    @Override
+    public void showInfo(){
+        super.showInfo();
+        System.out.println("날개 길이 : " + getWingspan());
     }
 
     // Bird 클래스에서만 사용할 수 있는 기능들
     public void fly(){
-        System.out.println(getName() + "이(가) 높이 날아 오릅니다.");
+        System.out.println(getName() + " 이(가) 높이 날아 오릅니다.");
     }
     public void buildNest(){
-        System.out.println(getName() + "이(가) 둥지를 짓습니다.");
+        System.out.println(getName() + " 이(가) 둥지를 짓습니다.");
     }
 }
 

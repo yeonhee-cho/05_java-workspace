@@ -57,27 +57,26 @@ public class Animal {
     // 개발자가 필요로하는 기타 메서드들
     // 공통 메소드
     public void eat(){
-        System.out.println(name + "이(가) 음식을 먹고 있습니다.");
+        System.out.println(getName() + " 이(가) 음식을 먹고 있습니다.");
     }
 
     public void sleep(){
-        System.out.println(name + "이(가) 잠을 자고 있습니다.");
+        System.out.println(getName() + " 이(가) 잠을 자고 있습니다.");
     }
-
-    public void showInfo(){
-        System.out.println("=== 동물원 친구들 소개 ===");
-        System.out.println("이름 : " + getName());
-        System.out.println("나이 : " + getAge());
-        System.out.println("색상 : " + getColor());
-    }
-
 
     // 오버라이딩 대상 메소드 makeSound() move()
     public void makeSound(){
-        System.out.println(name + "이(가) 소리냅니다.");
+        System.out.println(getName() + " 이(가) 웁니다.");
     }
 
     public void move(){
-        System.out.println(name + "이(가) 움직입니다.");
+        System.out.println(getName() + " 이(가) 다닙니다.");
+    }
+
+    public void showInfo() {
+        System.out.println("=== 정보 ===");
+        System.out.println("이름 : " + getName());
+        System.out.println("나이 : " + getAge());
+        System.out.println("색상 : " + getColor());
     }
 }

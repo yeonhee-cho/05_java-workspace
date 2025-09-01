@@ -13,8 +13,12 @@ public class AnimalInheritanceRun {
         // Dog 객체를 기본 생성자로 생성하고 setter로 다음 정보를 설정하세요.
         // 이름: "멍멍이", 나이: 3, 색깔: "갈색", 품종: "골든리트리버"
 
-        Dog dog1 = new Dog("멍멍이",3, "갈색","골든리트리버");
+        Dog dog1 = new Dog();
         // 여기에 setter 메소드들을 사용하여 정보 설정
+        dog1.setName("멍멍이");
+        dog1.setAge(3);
+        dog1.setColor("갈색");
+        dog1.setBreed("골든리트리버");
 
 
         // ============== 문제 2: 매개변수 생성자 활용 ==============
@@ -39,6 +43,10 @@ public class AnimalInheritanceRun {
 
         System.out.println("=== 동물원 친구들 소개 ===");
         // 여기에 코드 작성
+        dog1.showInfo();
+        cat1.showInfo();
+        bird1.showInfo();
+        bird2.showInfo();
 
 
         // ============== 문제 5: 공통 행동 테스트 ==============
@@ -46,9 +54,18 @@ public class AnimalInheritanceRun {
 
         System.out.println("\n=== 식사 시간 ===");
         // 여기에 코드 작성
+        dog1.eat();
+        cat1.eat();
+        bird1.eat();
+        bird2.eat();
+
 
         System.out.println("\n=== 잠자는 시간 ===");
         // 여기에 코드 작성
+        dog1.sleep();
+        cat1.sleep();
+        bird1.sleep();
+        bird2.sleep();
 
 
         // ============== 문제 6: 오버라이딩된 메소드 테스트 ==============
@@ -56,9 +73,18 @@ public class AnimalInheritanceRun {
 
         System.out.println("\n=== 동물들의 소리 ===");
         // 여기에 makeSound() 메소드 호출
+        dog1.makeSound();
+        cat1.makeSound();
+        bird1.makeSound();
+        bird2.makeSound();
+
 
         System.out.println("\n=== 동물들의 이동 ===");
         // 여기에 move() 메소드 호출
+        dog1.move();
+        cat1.move();
+        bird1.move();
+        bird2.move();
 
 
         // ============== 문제 7: 각 동물의 고유 메소드 실행 ==============
@@ -68,6 +94,14 @@ public class AnimalInheritanceRun {
 
         System.out.println("\n=== 동물별 특별한 행동 ===");
         // 여기에 코드 작성
+        dog1.wagTail();
+        dog1.fetch();
+        cat1.purr();
+        cat1.scratch();
+        bird1.fly();
+        bird1.buildNest();
+        bird2.fly();
+        bird2.buildNest();
 
 
         // ============== 문제 8: 상속 관계 확인 ==============
@@ -75,14 +109,18 @@ public class AnimalInheritanceRun {
 
         System.out.println("\n=== 상속 관계 확인 ===");
         // 여기에 instanceof 확인 코드 작성
-        // 예: System.out.println("dog1은 Animal의 인스턴스입니다: " + (dog1 instanceof Animal));
-
+        System.out.println("dog1은 Animal의 인스턴스입니다: " + (dog1 instanceof Animal));
 
         // ============== 문제 9: 정보 수정 후 재확인 ==============
         // dog1의 나이를 5세로, 품종을 "시바견"으로 변경한 후 정보를 다시 출력하세요.
 
         System.out.println("\n=== 정보 수정 후 ===");
         // 여기에 코드 작성
+        // 정보 수정
+        dog1.setAge(5);
+        dog1.setBreed("시바견");
+        // 정보 출력
+        dog1.showInfo();
 
 
         // ============== 문제 10: Super 키워드 이해 ==============
@@ -95,7 +133,10 @@ public class AnimalInheritanceRun {
         Dog dog4 = new Dog("초코", 2, "초콜릿색", "푸들"); // 4개 매개변수 생성자
 
         // 각 강아지 정보 출력해보기
-
+        dog1.showInfo();
+        dog2.showInfo();
+        dog3.showInfo();
+        dog4.showInfo();
 
         // ============== 보너스 문제 1: 메소드 오버라이딩 vs 부모 메소드 ==============
         // Animal의 기본 makeSound()와 자식의 오버라이딩된 makeSound() 비교

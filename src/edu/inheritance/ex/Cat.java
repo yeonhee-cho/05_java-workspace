@@ -5,7 +5,7 @@ public class Cat extends Animal{ // 이 줄에 빨간 에러가 뜨는 이유: �
     // 부모의 필드를 활용할 수 있는 생성자가 존재하지 않아 문제가 발생
     
     // 필드 속성 인스턴스 변수
-    private Boolean isIndoor; // 실내묘 여부
+    private boolean isIndoor; // 실내묘 여부
 
     // 기본 생성자
     public Cat(){
@@ -13,17 +13,17 @@ public class Cat extends Animal{ // 이 줄에 빨간 에러가 뜨는 이유: �
     }
 
     // 매개변수가 4개 존재하는 생성자 Animal 3개 + Cat 1개
-    public Cat(String name, int age, String color, Boolean isIndoor) {
+    public Cat(String name, int age, String color, boolean isIndoor) {
         super(name, age, color);
         this.isIndoor = isIndoor;
     }
 
     // getter/setter
-    public Boolean getIndoor() {
+    public boolean isIndoor() {
         return isIndoor;
     }
 
-    public void setIndoor(Boolean indoor) {
+    public void setIndoor(boolean indoor) {
         isIndoor = indoor;
     }
 
@@ -32,20 +32,28 @@ public class Cat extends Animal{ // 이 줄에 빨간 에러가 뜨는 이유: �
     public void makeSound() {
         // Animal의 작성된 이름이 private = Animal 클래스에서만 사용할 수 있는 명칭으로
         // getName을 활용해서 setName에 담겨져 있는 데이터를 사용
-        System.out.println(getName() + "이(가) 야옹 웁니다.");
+        System.out.println(getName() + " 이(가) 야옹 웁니다.");
     }
 
     @Override
     public void move() {
-        System.out.println(getName() + "이(가) 네 발로 조용히 걸어다닙니다.");
+        System.out.println(getName() + " 이(가) 네 발로 조용히 걸어다닙니다.");
+    }
+
+    public void showInfo(){
+        super.showInfo();
+        System.out.println("실내묘 여부 : " + (isIndoor() ? "실내묘" : "실내묘 아님") );
+        //앞에 is가 붙으면 get 생략, is get 둘 다 동사이기 때문에 is 사용
     }
 
     // Cat 클래스에서만 사용할 수 있는 기능들
     public void purr(){
-        System.out.println(getName() + "이(가) 골골 소리를 냅니다.");
+        System.out.println(getName() + " 이(가) 골골 소리를 냅니다.");
     }
 
     public void scratch(){
-        System.out.println(getName() + "이(가) 발톱으로 긁습니다.");
+        System.out.println(getName() + " 이(가) 발톱으로 긁습니다.");
     }
+
+
 }
