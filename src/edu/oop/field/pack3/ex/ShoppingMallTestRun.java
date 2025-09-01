@@ -96,7 +96,7 @@ public class ShoppingMallTestRun {
         System.out.println();
         member2.printMemberInfo();
         System.out.println();
-        member3.printMemberInfo(); // member3은 장바구니 갯수 초과로 물건을 담을 수 없어 0으로 조회
+        member3.printMemberInfo(); // member3은 장바구니 개수 초과로 물건을 담을 수 없어 0으로 조회
 
         /*
         * Q1. member1으로 호출 했을 때 왜 totalMemberCount에 노란 경고가 나타나며 자동 완성이 안될까요?

@@ -1,4 +1,4 @@
-package edu.inheritance.ex;
+package edu.inheritance.ex1;
 
 public class Cat extends Animal{ // 이 줄에 빨간 에러가 뜨는 이유: 생성자를 만들어주지 않았기 때문!
     // 상속의 경우 부모에 작성된 필드와 생성자를 활용하겠다가 기본 정의이므로

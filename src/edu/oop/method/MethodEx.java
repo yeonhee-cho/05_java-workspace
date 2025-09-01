@@ -116,7 +116,7 @@ public class MethodEx {
 
     }
 
-    // 6-5 매개변수에서 자료형이 동일하고 갯수도 동일할 경우
+    // 6-5 매개변수에서 자료형이 동일하고 개수도 동일할 경우
     // public void login(String email) {
     //  에러 발생 : login(String)'이(가) 'edu.oop.method.MethodEx'에 이미 정의되어 있습니다
     // }

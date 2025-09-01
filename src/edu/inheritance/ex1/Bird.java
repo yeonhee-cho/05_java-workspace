@@ -1,4 +1,4 @@
-package edu.inheritance.ex;
+package edu.inheritance.ex1;
 
 public class Bird extends Animal {
     // 필드 속성 인스턴스 변수

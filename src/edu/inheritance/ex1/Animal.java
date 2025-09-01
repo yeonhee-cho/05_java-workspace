@@ -1,4 +1,4 @@
-package edu.inheritance.ex;
+package edu.inheritance.ex1;
 
 /**
  * - **공통 필드**: `name`, `age`, `color` (private 선언)
