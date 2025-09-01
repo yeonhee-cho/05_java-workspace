@@ -9,10 +9,44 @@ public class NaverService {
     protected String userNickname; // 유저 닉네임
     protected int userLevel; // 유저 레벨
 
+    public NaverService(){}
+
     public NaverService(String serviceName, String userId, String userNickname, int userLevel) {
         this.serviceName = serviceName;
         this.userId = userId;
         this.userNickname = userNickname;
+        this.userLevel = userLevel;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getUserNickname() {
+        return userNickname;
+    }
+
+    public void setUserNickname(String userNickname) {
+        this.userNickname = userNickname;
+    }
+
+    public int getUserLevel() {
+        return userLevel;
+    }
+
+    public void setUserLevel(int userLevel) {
         this.userLevel = userLevel;
     }
 
@@ -22,6 +56,14 @@ public class NaverService {
 
     public void logout() {
         System.out.println(userNickname + "님이 " + serviceName + "에서 로그아웃했습니다.");
+    }
+
+    public void showUserInfo(){
+        System.out.println("서비스 명칭 : " + getServiceName());
+        System.out.println("유저 아이디 : " + getUserId());
+        System.out.println("유저 닉네임 : " + getUserNickname());
+        System.out.println("유저 레벨 : " + getUserLevel());
+
     }
 
     public void search() {
