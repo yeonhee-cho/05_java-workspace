@@ -30,7 +30,7 @@ public class PloyService {
     // 데이터 변환 시 데이터가 손실되어 문제 발생
     // SmartPhone을 상속받는 Galaxy와 같은 데이터가 잘 못 들어올 수 있기 때문에
     // 부모 변수이름 = new 자식();은 가능하나
-    // 자식 변수이름 = new 부모();는 불가능 부모가 갤럭시를 //TODO
+    // 자식 변수이름 = new 부모();는 불가능 부모가 갤럭시를 참조해서 사용할 수 있기 때문
 
     // 메서드
     public void method1(){
