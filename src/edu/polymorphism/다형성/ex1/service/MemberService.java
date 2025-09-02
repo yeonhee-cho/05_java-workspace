@@ -1,0 +1,16 @@
+package edu.polymorphism.다형성.ex1.service;
+
+import edu.polymorphism.다형성.ex1.model.Member;
+
+public class MemberService {
+    // 회원 생성
+    Member member = new Member("김철수", "kim123", "kim@email.com",
+            "010-1234-5678", "서울시 강남구", 30, "VIP", 1500.0);
+
+    public void info(){
+        // member.정보조회로 작성된 기능 활용
+        member.toString();
+        // return;으로 정보를 가지고 있는 상황
+        System.out.println(member.toString()); // html이 없기 때문에 출력문으로 데이터 조회해야함
+    }
+}
