@@ -11,6 +11,36 @@ public class Member {
     private String memberGrade; // 일반, VIP, VVIP
     private double memberPoint;
 
+    public Member() {
+    }
+
+    public Member(String memberName, String memberId, String memberEmail, String memberPhone, String memberAddress, int memberAge, String memberGrade, double memberPoint) {
+        this.memberName = memberName;
+        this.memberId = memberId;
+        this.memberEmail = memberEmail;
+        this.memberPhone = memberPhone;
+        this.memberAddress = memberAddress;
+        this.memberAge = memberAge;
+        this.memberGrade = memberGrade;
+        this.memberPoint = memberPoint;
+    }
+    
+    // Object 클래스 내에 존재하는 필드 정보 조회 메서드를 호출하고
+    // MemberService에서 정보 조회 메서드를 사용하여 정보 조회하기
+    // @Override
+    @Override
+    public String toString() {
+        return "멤버조회 = " +
+                "memberName='" + memberName + '\'' +
+                ", memberId='" + memberId + '\'' +
+                ", memberEmail='" + memberEmail + '\'' +
+                ", memberPhone='" + memberPhone + '\'' +
+                ", memberAddress='" + memberAddress + '\'' +
+                ", memberAge=" + memberAge +
+                ", memberGrade='" + memberGrade + '\'' +
+                ", memberPoint=" + memberPoint ;
+    }
+
     // 회원 관련 메서드들
     public void memberLogin() {
         System.out.println(memberName + "님이 로그인했습니다.");
