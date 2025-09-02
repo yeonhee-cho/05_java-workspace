@@ -9,6 +9,7 @@ package edu.inheritance.ex1;
 public class AnimalInheritanceRun {
     public static void main(String[] args) {
 
+
         // ============== 문제 1: 기본 생성자 + Setter 활용 ==============
         // Dog 객체를 기본 생성자로 생성하고 setter로 다음 정보를 설정하세요.
         // 이름: "멍멍이", 나이: 3, 색깔: "갈색", 품종: "골든리트리버"
@@ -37,7 +38,22 @@ public class AnimalInheritanceRun {
         Bird bird1 = new Bird("짹짹이", 1, "노란색");
         Bird bird2 = new Bird("파랑이", 2, "파란색",25.5);
 
+        Animal[] animals = {dog1,cat1,bird1,bird2};
+        // Animal클래스 내부에 작성된 필드, 기능만 호출 출력 가능
+        for(Animal animal : animals){
+            // 예를 들어 animals에서 animal 내 0번 째인 dog1 내부에 작성된 데이터가 전달되면
+            // animal에는 dog1에 작성된 데이터를 기반으로 출력
+            // 출력될 때는 Animal에 작성된 기능을 재사용하여 dog1에 맞게 수정된 기능 내용이 출력
+            // 하지만 animal에는 존재하지 않고, dog1에만 존재하는 기능은 출력할 수 없음
+            // 왜냐하면 animal 틀 이 외의 기능이기 때문!
+            animal.showInfo();
+            animal.eat();
+            animal.sleep();
+            animal.makeSound();
+            animal.move();
+        }
 
+        /*
         // ============== 문제 4: 동물 정보 출력 ==============
         // 모든 동물의 기본 정보를 showInfo() 메소드로 출력하세요.
 
@@ -47,7 +63,6 @@ public class AnimalInheritanceRun {
         cat1.showInfo();
         bird1.showInfo();
         bird2.showInfo();
-
 
         // ============== 문제 5: 공통 행동 테스트 ==============
         // 모든 동물이 먹고 자는 행동을 해보세요. (eat, sleep 메소드)
@@ -59,14 +74,12 @@ public class AnimalInheritanceRun {
         bird1.eat();
         bird2.eat();
 
-
         System.out.println("\n=== 잠자는 시간 ===");
         // 여기에 코드 작성
         dog1.sleep();
         cat1.sleep();
         bird1.sleep();
         bird2.sleep();
-
 
         // ============== 문제 6: 오버라이딩된 메소드 테스트 ==============
         // 각 동물의 고유한 소리와 이동 방식을 확인하세요.
@@ -78,7 +91,6 @@ public class AnimalInheritanceRun {
         bird1.makeSound();
         bird2.makeSound();
 
-
         System.out.println("\n=== 동물들의 이동 ===");
         // 여기에 move() 메소드 호출
         dog1.move();
@@ -86,11 +98,11 @@ public class AnimalInheritanceRun {
         bird1.move();
         bird2.move();
 
-
         // ============== 문제 7: 각 동물의 고유 메소드 실행 ==============
         // 강아지: wagTail(), fetch()
         // 고양이: purr(), scratch()
         // 새: fly(), buildNest()
+        */
 
         System.out.println("\n=== 동물별 특별한 행동 ===");
         // 여기에 코드 작성
