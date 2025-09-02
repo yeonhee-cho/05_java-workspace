@@ -52,7 +52,7 @@ public class SmartPhone /* extends Object */ {
         return ap;
     }
 
-    // 우리가 showInfo와 같은 출력문을 하나씩 작성하지 않아도 알아서 변수이름들에 대한 데이터 정보를 출력할 수 있도록 // TODO
+    // 우리가 showInfo와 같은 출력문을 하나씩 작성하지 않아도 알아서 변수이름들에 대한 데이터 정보를 출력할 수 있도록
     // 기능을 재사용하여 정보확인에 대한 기능을 편리하게 사용할 수 있음
     // Object class 객체 문서파일에서 메서드를 SmartPhone class 문서를 작성하는
     // 개발자가 SmartPhone class 문서 필드에 대한 정보를 확인할 수 있도록 재사용한 것
