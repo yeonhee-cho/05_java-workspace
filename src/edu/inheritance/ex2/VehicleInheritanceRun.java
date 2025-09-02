@@ -1,5 +1,7 @@
 package edu.inheritance.ex2;
 
+import edu.inheritance.ex3.GoogleService;
+
 /**
  * 교통수단 클래스 상속 실습 문제
  *
@@ -40,52 +42,74 @@ public class VehicleInheritanceRun {
         Bicycle bike1 = new Bicycle("트렉", "FX", 2023, "검정색");
         Bicycle bike2 = new Bicycle("자이언트", "이스케이프", 2023, "빨간색", 21, true);
 
+        // 다형성을 활용해서 한 번에 출력
+        // 변수 이름 : vehicles 배열 형태
+        // 배열 출력 for문 내 변수이름 : info
+        Vehicle[] vehicles = {car1,motorcycle1,bike1,bike2};
+
+        for(Vehicle info : vehicles){
+            System.out.println("=== 교통수단 정보 ===");
+            info.showInfo();
+
+            System.out.println("\n=== 시동 걸기 ===");
+            info.start();
+
+            System.out.println("\n=== 정지하기 ===");
+            info.stop();
+
+            System.out.println("\n=== 가속 방식 ===");
+            info.accelerate();
+
+            System.out.println("\n=== 제동 방식 ===");
+            info.brake();
+        }
 
         // ============== 문제 4: 교통수단 정보 출력 ==============
         // 모든 교통수단의 기본 정보를 showInfo() 메소드로 출력하세요.
 
-        System.out.println("=== 교통수단 정보 ===");
-        // 여기에 코드 작성
-        car1.showInfo();
-        motorcycle1.showInfo();
-        bike1.showInfo();
-        bike2.showInfo();
+        // System.out.println("=== 교통수단 정보 ===");
+        // // 여기에 코드 작성
+        //
+        // car1.showInfo();
+        // motorcycle1.showInfo();
+        // bike1.showInfo();
+        // bike2.showInfo();
 
 
         // ============== 문제 5: 공통 행동 테스트 ==============
         // 모든 교통수단이 시동을 걸고 정지하는 행동을 해보세요. (start, stop 메소드)
 
-        System.out.println("\n=== 시동 걸기 ===");
-        // 여기에 코드 작성
-        car1.start();
-        motorcycle1.start();
-        bike1.start();
-        bike2.start();
-
-        System.out.println("\n=== 정지하기 ===");
-        // 여기에 코드 작성
-        car1.stop();
-        motorcycle1.stop();
-        bike1.stop();
-        bike2.stop();
+        // System.out.println("\n=== 시동 걸기 ===");
+        // // 여기에 코드 작성
+        // car1.start();
+        // motorcycle1.start();
+        // bike1.start();
+        // bike2.start();
+        //
+        // System.out.println("\n=== 정지하기 ===");
+        // // 여기에 코드 작성
+        // car1.stop();
+        // motorcycle1.stop();
+        // bike1.stop();
+        // bike2.stop();
 
 
         // ============== 문제 6: 오버라이딩된 메소드 테스트 ==============
         // 각 교통수단의 고유한 가속과 제동 방식을 확인하세요.
 
-        System.out.println("\n=== 가속 방식 ===");
-        // 여기에 accelerate() 메소드 호출
-        car1.accelerate();
-        motorcycle1.accelerate();
-        bike1.accelerate();
-        bike2.accelerate();
-
-        System.out.println("\n=== 제동 방식 ===");
-        // 여기에 brake() 메소드 호출
-        car1.brake();
-        motorcycle1.brake();
-        bike1.brake();
-        bike2.brake();
+        // System.out.println("\n=== 가속 방식 ===");
+        // // 여기에 accelerate() 메소드 호출
+        // car1.accelerate();
+        // motorcycle1.accelerate();
+        // bike1.accelerate();
+        // bike2.accelerate();
+        //
+        // System.out.println("\n=== 제동 방식 ===");
+        // // 여기에 brake() 메소드 호출
+        // car1.brake();
+        // motorcycle1.brake();
+        // bike1.brake();
+        // bike2.brake();
 
         // ============== 문제 7: 각 교통수단의 고유 메소드 실행 ==============
         // 자동차: honk(), openTrunk()
