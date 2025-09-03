@@ -1,6 +1,6 @@
 package edu.polymorphism.pack3.ex3;
 
-abstract class TaxiApp {
+class TaxiApp {
     protected String appName;
     protected String userName;
     protected String currentLocation;
@@ -26,7 +26,4 @@ abstract class TaxiApp {
     }
 
     // 추상 메서드 (반드시 구현해야 함)
-    public abstract void callTaxi();
-    public abstract int calculateFare(int distance);
-    public abstract void showDriverInfo();
 }
