@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex5;
 
 public class Netflix implements StreamingService {
     private String show;

@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex4;
 
 public class Discord implements Messenger {
     private String server;

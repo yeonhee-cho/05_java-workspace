@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex2;
 
 public interface SocialMedia {
     void post(); // 게시물 작성

@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex1;
 
 public class YouTube implements VideoPlayer {
     private String videoTitle;

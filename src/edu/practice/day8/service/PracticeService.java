@@ -1,6 +1,20 @@
 package edu.practice.day8.service;
 
-import edu.practice.day8.model.*;
+import edu.practice.day8.model.ex1.TikTok;
+import edu.practice.day8.model.ex1.VideoPlayer;
+import edu.practice.day8.model.ex1.YouTube;
+import edu.practice.day8.model.ex2.Instagram;
+import edu.practice.day8.model.ex2.SocialMedia;
+import edu.practice.day8.model.ex2.Twitter;
+import edu.practice.day8.model.ex3.Amazon;
+import edu.practice.day8.model.ex3.Coupang;
+import edu.practice.day8.model.ex3.OnlineShopping;
+import edu.practice.day8.model.ex4.Discord;
+import edu.practice.day8.model.ex4.KakaoTalk;
+import edu.practice.day8.model.ex4.Messenger;
+import edu.practice.day8.model.ex5.Disney;
+import edu.practice.day8.model.ex5.Netflix;
+import edu.practice.day8.model.ex5.StreamingService;
 
 public class PracticeService {
     public void videoPlayer() {

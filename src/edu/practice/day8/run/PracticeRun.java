@@ -1,6 +1,5 @@
 package edu.practice.day8.run;
 
-import edu.practice.day8.model.SocialMedia;
 import edu.practice.day8.service.PracticeService;
 
 /**

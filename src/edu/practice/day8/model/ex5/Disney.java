@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex5;
 
 public class Disney implements StreamingService {
     private String movie;

@@ -1,4 +1,4 @@
-package edu.practice.day8.model;
+package edu.practice.day8.model.ex3;
 
 public interface OnlineShopping {
     void browse();
