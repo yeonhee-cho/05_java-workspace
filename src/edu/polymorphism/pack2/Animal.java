@@ -26,7 +26,8 @@ public abstract class Animal {
     // 무조건 하는 것
     // eat sleep을 상속 받는 Dog에서 작성하지 않아도 아무런 문제가 되지 않음!
     public abstract void eat();
-    // TODO!!! 에러 : 비추상 클래스에 추상 메서드가 있습니다
+    // 에러 : 비추상 클래스에 추상 메서드가 있습니다 
+    // 위에 public abstract class Animal 이렇게 abstract를 넣어주지 않았을 경우
     public void sleep() {};
 
     // public void eat() {}

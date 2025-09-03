@@ -15,6 +15,9 @@ package edu.polymorphism;
  *
  *  // 추상화 할 기능 또한 abstract 작성해야하면 {}는 생략한다.
  * }
+ *
+ * That's too abstract for me to understand. - 너무 추상적이어서 이해하기 어려워.
+ * 특정 구현기술이 없어 모호한 기능을 나타내는 단어 {} 하나가 존재하지 않다는 이유로!
  */
 public abstract class 추상화 {
     // 필드는 작성해도 되고 안해도 된다.
