@@ -12,7 +12,8 @@ public class ListPracticeRun {
         // problem2();
         // problem3();
         // problem4();
-        problem5();
+        // problem5();
+        problem6();
     }
 
     // void 앞에 static이 붙는다는 것은 변수이름에 의하여 호출되지 않고, 
@@ -151,5 +152,24 @@ public class ListPracticeRun {
         System.out.println("가장 큰 숫자 : " + list.size());
     }
 
+    public static void problem6(){
+        List<String> list = new ArrayList<>();
+        list.add("게임");
+        list.add("요리");
+        list.add("독서");
+        list.add("요리");
+        list.add("요리");
+        System.out.println(list);
 
+        System.out.println("요리가 몇 번 째로 들어있나? : " + list.indexOf("요리")); // 요리가 몇 번 째로 들어있나? : 1
+        // indexOf()는 중복 데이터가 있을 경우 맨 앞 index 번호만 출력
+
+        // 요리가 들은 모든 index를 보고 싶어요
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).equals("요리")){ // equals 는 문자열 비교하는 기능
+                // equals는 비교했을 때 동일하면 true 다르면 false
+                System.out.println(i + "번째 위치");
+            }
+        }
+    }
 }
