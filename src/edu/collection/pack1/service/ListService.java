@@ -140,7 +140,52 @@ public class ListService {
         int input = 0; // 추후 메뉴 번호를 입력받고, 번호를 가지고 있을 공간의 명칭 = input
 
         while(true){
+            System.out.println("""
+    📖 도서 관리 시스템 📖
+    1️⃣. 추가
+    2️⃣. 전체조회
+    0️⃣. 종료
+                    """);
 
+            System.out.print("메뉴 번호 입력 : ");
+            input = sc.nextInt();
+            sc.nextLine(); // 스캐너에 남아있는 개행문자 제거(자동으로 한 줄 줄바꿈 버퍼 생성)
+
+            switch (input){
+                case 0 :
+                    System.out.println("도서 프로그램을 종료합니다.");
+                    return;
+                case 1 :
+                    System.out.println("도서를 추가합니다.");
+                    System.out.print("제목을 입력하세요. : ");
+                    String title = sc.nextLine();
+                    System.out.print("저자를 입력하세요. : ");
+                    String writer = sc.nextLine();
+                    System.out.print("가격을 입력하세요.");
+                    int price = sc.nextInt();
+
+                    // List는 int, String, boolean 이 외 모든 것을 담을 수 있음
+                    // 그런데 List<Book> -> 담을 수 있는 데이터를
+                    // Book class 책 문서 형태의 데이터들로 이루어진 것만
+                    // 담을 수 있도록 목록 추가 제약 설정
+                    bookList.add(new Book(title, writer, price)); // bookList는 책제목, 저자, 가격 형태만 가능
+                    System.out.println("책이 추가되었습니다.");
+                    break;
+                case 2 :
+                    //bookList.size() > 0 경우에만 조회
+                    if(bookList.size() > 0){
+                        System.out.println("도서 목록을 모두 조회합니다.");
+                        // bookList  공간에 저장된 책 형태들을 조회하시
+                        // for문 다형성에서 작성했던 것처럼 향상된 for문 활용하기
+                        for(Book book:bookList) System.out.println(book);
+                    } else {
+                        System.out.println("도서가 존재하지 않습니다.");
+                    }
+                    break;
+                default :
+                    System.out.println("번호를 잘 못 입력하셨습니다.");
+            }
+            System.out.println();
         }
     }
 }
