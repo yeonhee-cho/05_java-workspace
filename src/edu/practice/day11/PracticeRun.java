@@ -5,7 +5,10 @@ public class PracticeRun {
         // SafeFileManager manager = new SafeFileManager();
         // manager.method1();
 
-        BankAccountManager manager2 = new BankAccountManager();
-        manager2.method2();
+        // BankAccountManager manager2 = new BankAccountManager();
+        // manager2.method2();
+
+        StoreInventoryManager manager3 = new StoreInventoryManager();
+        manager3.method3();
     }
 }
