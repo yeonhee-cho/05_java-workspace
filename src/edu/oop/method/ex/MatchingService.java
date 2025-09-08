@@ -14,7 +14,7 @@ public class MatchingService {
         int input;
 
         while (true) {
-            System.out.println("\n=== 더조은 결혼정보회사 관리 시스템 ===");
+            System.out.println("\n=== 가나다 결혼정보회사 관리 시스템 ===");
             System.out.println("1. 회원 등록");
             System.out.println("2. 회원 정보 확인");
             System.out.println("3. 회원 정보 수정");
