@@ -7,10 +7,8 @@ public class FileRun {
         FileService fs = new FileService();
         // fs.method1();
         // fs.method2();
-        fs.method3();
-        fs.method3();
-        fs.method3();
-        fs.method4();
+        // fs.method3();
+        // fs.method4();
         fs.method5();
     }
 }
