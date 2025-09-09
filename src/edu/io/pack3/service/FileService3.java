@@ -1,9 +1,8 @@
 package edu.io.pack3.service;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class FileService3 {
     public void 고전방식(){
@@ -33,6 +32,23 @@ public class FileService3 {
                     System.out.println("파일이 다른 곳에서 사용 중이기 때문에 닫을 수 없습니다.");
                 }
             }
+        }
+    }
+
+    public void 현대방식(){
+        Path path = Path.of("java_basic","files","파일2.txt"); // 폴더와 파일을 구분 알아서 /가 붙음
+
+        if(!Files.exists(path)){
+            System.out.println("파일 없음");
+            return;
+        }
+
+        try {
+            String content = Files.readString(path);
+            System.out.println(content);
+            // 파일을 다 읽으면 알아서 닫히므로 닫는다, 안닫는다 설정할 필요가 없음
+        } catch (IOException e) {
+            System.out.println("파일을 읽는 도중에 발생하는 문제에 대해 처리할 로직을 작성하는 곳 ");
         }
     }
 }

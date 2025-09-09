@@ -20,7 +20,7 @@ public class FilePracticeService {
     public void method1(){
         // 1. 경로 정의(상대 경로)
         // java_basic 이라는 폴더를 기준으로 폴더 및 파일 생성
-        String path = "java_basic/my_log"; // 폴더 명칭 맨 앞에 /가 붙지 않으면 현재 작업하고 있는 프로젝트 내에 폴더 경로로 인식
+        String path = "java_basic/my_logs"; // 폴더 명칭 맨 앞에 /가 붙지 않으면 현재 작업하고 있는 프로젝트 내에 폴더 경로로 인식
         String fileName = "/access_log.log";
         
         // 2. File 객체 생성
