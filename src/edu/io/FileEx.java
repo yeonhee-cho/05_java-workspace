@@ -109,5 +109,4 @@ public class FileEx {
         Path 상대경로3 = Path.of("..", "file.txt"); // 현재 폴더를 감싸고 있는 상위 폴더를 가리킴
         Path 상대경로4 = Path.of(".", "path1","file.txt"); // 현재 폴더에서 path1이라는 폴더 안에 존재하는 file.txt
     }
-
 }
