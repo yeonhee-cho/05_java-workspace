@@ -29,6 +29,7 @@ public class FileWriteService {
 
         System.out.println("작성 완료를 원하실 경우 finish를 입력하세요.");
         System.out.print("내용을 입력 : ");
+        // ⭐ StringBuilder
         StringBuilder content = new StringBuilder();
         String line;
 
