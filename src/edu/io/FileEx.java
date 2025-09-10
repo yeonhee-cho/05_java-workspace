@@ -56,9 +56,9 @@ public class FileEx {
         }
 
         // 기타 문제들
-        // File 클래스 느림
-        // 시스템에서 직접적으로 콜 위험성 높음
-        // copy() move() readAllText() 파일 복사, 파일 이동, 파일 내 모든 텍스트 읽기 기능 등 다수 없음
+        // - File 클래스 느림
+        // - 시스템에서 직접적으로 콜 위험성 높음
+        // - copy() move() readAllText() 파일 복사, 파일 이동, 파일 내 모든 텍스트 읽기 기능 등 다수 없음
 
         // 현대적 방식(2011년 ~ ) - 새롭고 편리함
         Path path = Path.of("폴더경로/파일이름.확장자명");
@@ -164,7 +164,7 @@ public class FileEx {
      *
      * Files.move(Path.of("원본파일경로/원본파일이름.확장자이름"),Path.of("이동해놓을파일경로/(선택적으로변경)파일이름.확장자이름"));
      * Files.move(Path.of("원본파일경로/원본파일이름.확장자이름"),Path.of("이동해놓을파일경로/(선택적으로변경)파일이름.확장자이름"), StandardCopyOption.REPLACE_EXISTING);
-     * StandardCopyOption.REPLACE_EXISTING -> 파일 이동할 때 덮어쓰기 형태로 복사 // TODO
+     * StandardCopyOption.REPLACE_EXISTING -> 파일 이동할 때 덮어쓰기 형태로 파일이동
      *
      * Files.delete(Path.of("경로/파일이름.확장자이름")); -> 파일 삭제 하는데 삭제 못 하면 예외 발생
      * Files.deleteIfExists(Path.of("경로/파일이름.확장자이름")); -> 파일 삭제하는데 존재하지 않아도 예외 발생하지 않음
