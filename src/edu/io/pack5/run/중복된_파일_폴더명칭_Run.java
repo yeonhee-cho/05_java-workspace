@@ -10,5 +10,7 @@ public class 중복된_파일_폴더명칭_Run {
         // service.saveImage3();
         // service.saveImage4();
         service.saveImage5();
+        String imgUrl = "https://media.bunjang.co.kr/product/79290165_2_1516278342_w360.jpg";
+        service.kakaoSave(imgUrl);
     }
 }

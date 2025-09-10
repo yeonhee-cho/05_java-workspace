@@ -1,5 +1,6 @@
 package edu.io.pack5.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -194,5 +195,27 @@ public class 중복된_파일_폴더명칭_Service {
         }
     }
 
+    /**
+     * 최근 트렌드
+     */
+    // c 드라이브 아래에 kakaoTalk 이라는 폴더에 사진을 저장하기
+    // 사진을 저장할 때는 반드시
+    // KakaoTalk_현재시간.jpg 형태로 저장할 것
+    // int 마침표위치 -> kakaoName 에
+    // String kakaoName
+    // String 확장자이름 -> kakaoName 에
+    public void kakaoSave(String imgUrl) {
+        String kakaoName = "KakaoTalk_" + System.currentTimeMillis() + ".jpg";
+        Path path = Path.of("/kakaoTalk", kakaoName);
 
+        try {
+            Files.createDirectories(path.getParent());
+            URL url = new URL(imgUrl);
+            InputStream in = url.openStream();
+            Files.copy(in,path);
+            System.out.println(path + "생성이 완료되었습니다.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
