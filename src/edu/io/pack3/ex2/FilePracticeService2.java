@@ -11,14 +11,14 @@ public class FilePracticeService2 {
         Path path;
 
         if(dirName != null && !dirName.isEmpty()){
-            path = Path.of("java_basic",dirName,fileName);
+            path = Path.of(dirName,fileName);
         } else {
-            path = Path.of("java_basic",fileName); // 폴더와 관계없이 파일이 존재하면
-            // 폴더는 선택하지 않았고 파일 내용만 선택, java_basic 에서 파일을 선택하고 출력
+            path = Path.of(fileName); // 폴더와 관계없이 파일이 존재하면
+            // 폴더는 선택하지 않았고 파일 내용만 선택, 최상위 파일에서 파일을 선택하고 출력
         }
 
-        System.out.println(path.getParent()); // java_basic\my_logs
-        System.out.println(path); // java_basic\my_logs\intro.txt
+        System.out.println(path.getParent()); // my_logs
+        System.out.println(path); // my_logs\intro.txt
         if(path.getParent() != null){
             if(!Files.exists(path.getParent())){
                 System.out.println("폴더가 존재하지 않습니다. 폴더이름을 확인해주세요.");

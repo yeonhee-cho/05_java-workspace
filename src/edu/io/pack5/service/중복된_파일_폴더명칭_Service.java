@@ -30,7 +30,7 @@ public class 중복된_파일_폴더명칭_Service {
         do{ // while() 안에 있는 값이 true false 상관없이 무조건 최초 1회 실행
             // 사진_숫자.png
             String newName = baseName + "_" + count + extName;
-            path = Path.of("java_basic", "profiles", "member01",newName); // 기존 이름 -> 숫자가 붙은 이름 변경
+            path = Path.of("profiles", "member01",newName); // 기존 이름 -> 숫자가 붙은 이름 변경
             count++; // 사진_1이 존재하면 숫자를 계속 올려서 존재하지 않는 이름이 나올 때까지 숫자값 상승
         } while (Files.exists(path)); // 파일이 이름이 존재하면 존재하는 파일 이름이 없을 때까지 반복
 
@@ -72,7 +72,7 @@ public class 중복된_파일_폴더명칭_Service {
 
             String newName = baseName + "_" + count + extName;
             System.out.println("newName : " + newName);
-            path = Path.of("java_basic", "profiles", "member01", newName);
+            path = Path.of("profiles", "member01", newName);
             count++;
         }
         try {
@@ -116,7 +116,7 @@ public class 중복된_파일_폴더명칭_Service {
 
             String newName = baseName + "_" + System.currentTimeMillis() + extName;
             System.out.println("newName : " + newName);
-            path = Path.of("java_basic", "profiles", "member01", newName);
+            path = Path.of("profiles", "member01", newName);
 
         }
         try {
@@ -167,7 +167,7 @@ public class 중복된_파일_폴더명칭_Service {
         // 생기는 오류 : java.lang.RuntimeException: java.net.MalformedURLException: unknown protocol: data
         String originName = "사진.png";
         
-        Path path = Path.of("java_basic","profiles", "member01", originName);
+        Path path = Path.of("profiles", "member01", originName);
         
         int 마침표위치 = originName.lastIndexOf('.'); // 마지막에 위치한 마침표의 위치
         String 확장자없는이름 = originName.substring(0, 마침표위치);
@@ -176,7 +176,7 @@ public class 중복된_파일_폴더명칭_Service {
         int 숫자 = 1;
         while (Files.exists(path)) {
             String 새로운이름 = 확장자없는이름 + "(" + 숫자 + ")" + 확장자이름;
-            path = Path.of("java_basic","profiles", "member01", 새로운이름);
+            path = Path.of("profiles", "member01", 새로운이름);
             // 혹시나 현재 작성한 숫자 번호를 포함한 전체이름이 파일에 존재할 수 있으므로
             // 미리 숫자 번호를 +1 하여 대비해둔다.
             숫자++;

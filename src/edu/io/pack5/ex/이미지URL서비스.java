@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 public class 이미지URL서비스 {
     public void dirSaveImg(String imgUrl, String imgDir, String imgName){
-        Path path = Path.of("java_basic", "profiles", imgDir, imgName); // of 쓰는 이유 : 간결함, path와 paths의 헷갈림 없음
+        Path path = Path.of("profiles", imgDir, imgName); // of 쓰는 이유 : 간결함, path와 paths의 헷갈림 없음
 
         System.out.println("path: " + path);
         System.out.println("path.getParent: " + path.getParent());
@@ -34,7 +34,7 @@ public class 이미지URL서비스 {
             do {
                 // 새로운 이름 = 사용자가 작성한 이름_ 숫자.png
                 String newName = bashName + "_" + count + extName;
-                path = Path.of("java_basic", "profiles", imgDir, newName);
+                path = Path.of("profiles", imgDir, newName);
                 count++; // 사자_8 .... 동일한 명칭의 파일이 없을 때까지 진행
             } while(Files.exists(path));
 

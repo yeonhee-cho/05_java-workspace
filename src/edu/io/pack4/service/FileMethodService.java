@@ -10,7 +10,7 @@ public class FileMethodService {
      */
     public void createDirMethod(){
         // windows macbook 에서 작성하는 슬래시 기번에 따라 폴더를 구분하여 사용할 수 있도록 설정
-        Path path = Path.of("java_basic","files", "food", "dinner.txt");
+        Path path = Path.of("files", "food", "dinner.txt");
         System.out.println("path : " + path);
         System.out.println("path.getParent() : " + path.getParent());
 
@@ -24,7 +24,7 @@ public class FileMethodService {
     }
 
     public void createFileMethod(){
-        Path path = Path.of("java_basic","files", "food", "dinner.txt");
+        Path path = Path.of("files", "food", "dinner.txt");
         System.out.println("path : " + path);
         System.out.println("path.getParent() : " + path.getParent());
         try {

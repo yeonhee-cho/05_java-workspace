@@ -11,7 +11,7 @@ public class 프로필사진Service {
     // 1으로 끝나는 명칭들만 이용해서 member03 폴더 member04 폴더에 각각 프로필사진2.txt 저장
     public void createProfileFolder(String memberId, String profilePicture){
         // 1. 회원 프로필 이미지를 저장할 폴더 경로 생성
-        Path memberFolder1 = Path.of("java_basic","profiles", memberId, profilePicture);
+        Path memberFolder1 = Path.of("profiles", memberId, profilePicture);
         // Path memberFolder2 = Path.of("profiles", "member02");
         
         // 2. 폴더 생성
@@ -20,7 +20,7 @@ public class 프로필사진Service {
             // Files.createDirectories(memberFolder2);
             
             // 3. 폴더 내에 프로필 사진 저장하기
-            Path picture1 = Path.of("java_basic","profiles", memberId, profilePicture);
+            Path picture1 = Path.of("profiles", memberId, profilePicture);
             // Path picture2 = Path.of("profiles", "member02");
             
             Files.writeString(picture1, "프로필 사진 이미지입니다.");
@@ -38,11 +38,11 @@ public class 프로필사진Service {
     public void saveImg(String imgUrl){
         // String imgUrl = "https://www.fitpetmall.com/wp-content/uploads/2022/11/shutterstock_196467692-1024x819.jpg";
 
-        Path memberFolder1 = Path.of("java_basic", "profiles", "member06");
+        Path memberFolder1 = Path.of("profiles", "member06");
 
         try {
             Files.createDirectories(memberFolder1);
-            Path picture1 = Path.of("java_basic", "profiles", "member06", "사진1.png");
+            Path picture1 = Path.of("profiles", "member06", "사진1.png");
 
             // 4. 이미지 주소에서 이미지 다운로드 처리 후
             System.out.println("이미지 다운로드 중...");
@@ -70,12 +70,12 @@ public class 프로필사진Service {
     // profiles member07 내부에 복사한 이미지 저장
     public void saveImg2(String imgUrl){
         // 회원 폴더 경로 생성
-        Path memberFolder = Path.of("java_basic", "profiles", "member07");
+        Path memberFolder = Path.of("profiles", "member07");
 
         try {
             // 폴더 생성하기
             Files.createDirectories(memberFolder);
-            Path picture = Path.of("java_basic", "profiles", "member07", "사진1.png");
+            Path picture = Path.of("profiles", "member07", "사진1.png");
 
             System.out.println("이미지 다운로드 중...");
             
@@ -98,13 +98,13 @@ public class 프로필사진Service {
     }
 
     public void saveImg3(String imgName){
-        Path mf = Path.of("java_basic", "profiles", "member07");
+        Path mf = Path.of("profiles", "member07");
 
         try {
             String imgUrl = "https://www.fitpetmall.com/wp-content/uploads/2022/11/shutterstock_196467692-1024x819.jpg";
 
             Files.createDirectories(mf);
-            Path pf = Path.of("java_basic", "profiles", "member07", imgName);
+            Path pf = Path.of("profiles", "member07", imgName);
 
             System.out.println("이미지 다운로드 중...");
             URL url = new URL(imgUrl);
@@ -139,15 +139,15 @@ public class 프로필사진Service {
     // 폴더 안에 이미지를 웹에서 복제하여 저장
     // 확장자는 .png 사용
     public void saveImg4(String folder, String imgName) {
-        // Path mf = Path.of("java_basic", "profiles", folder,imgName); // 한 번에 쓸 경우
-        Path mf = Path.of("java_basic", "profiles", folder);
+        // Path mf = Path.of("profiles", folder,imgName); // 한 번에 쓸 경우
+        Path mf = Path.of("profiles", folder);
 
         try {
             // 폴더가 없을 경우 생성 있으면 false 넘어가기
             // Files.createDirectories(mf.getParent()); // 한 번에 쓸 경우
             Files.createDirectories(mf);
             // 폴더 안에 이미지까지 바라보는 경로
-            Path pf = Path.of("java_basic", "profiles", folder, imgName); // 한 번에 쓸 경우 생략
+            Path pf = Path.of("profiles", folder, imgName); // 한 번에 쓸 경우 생략
             System.out.println("이미지 다운로드 중...");
             String imgUrl = "https://www.fitpetmall.com/wp-content/uploads/2022/11/shutterstock_196467692-1024x819.jpg";
             URL url = new URL(imgUrl);
@@ -168,7 +168,7 @@ public class 프로필사진Service {
     // Scanner로 원하는 이미지 주소를 넣었을 때 권한 문제 없이 정상적으로 작동
     // https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZWlPjghR3F6rno2RtA56T9mRyUL_BWILiAmpxP0-npm6nmw-Gsm9AFDYLAl8paow4CEKMeRHaQn39tB4VniZan8svg2JIpXXOO6L84F4
     public void saveImg5(String folder, String imgName, String imgUrl) {
-        Path pf = Path.of("java_basic", "profiles", folder, imgName);
+        Path pf = Path.of("profiles", folder, imgName);
 
         try {
             Files.createDirectories(pf.getParent());

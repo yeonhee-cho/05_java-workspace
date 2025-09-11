@@ -14,10 +14,10 @@ public class FilePracticeService {
 
         //  폴더명이 있으면 해당 폴더 안의 파일 확인
         if(dirName != null && !dirName.isEmpty()){
-            path = Path.of("java_basic",dirName,fileName);
+            path = Path.of(dirName,fileName);
         } else {
             // 없으면 현재 최상위 프로젝트 폴더 파일 에서 겁색
-            path = Path.of("java_basic",fileName);
+            path = Path.of(fileName);
         }
         // 폴더의 존재 확인
         if(path.getParent() != null){

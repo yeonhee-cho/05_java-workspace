@@ -37,7 +37,7 @@ public class FileWriteService {
             content.append(line).append("\n");
         }
 
-        Path path = Path.of("java_basic", "my_logs/" + fileName);
+        Path path = Path.of("my_logs/" + fileName);
         try {
             Files.createDirectories(path.getParent());
             Files.writeString(path, content);

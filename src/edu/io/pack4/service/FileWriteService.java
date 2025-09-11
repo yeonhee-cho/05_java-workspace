@@ -26,7 +26,7 @@ public class FileWriteService {
         }
 
         // 모두 작성하기를 종료하면 files/ 폴더 내에 특정 파일이름으로 저장하기
-        File file = new File("java_basic","files/" + fileName);
+        File file = new File("files/" + fileName);
 
         // 디렉토리가 없으면 생성
         if(!file.exists()){
@@ -68,7 +68,7 @@ public class FileWriteService {
         }
         
         // 여기부터 다름
-        Path path = Path.of("java_basic","files/" + fileName);
+        Path path = Path.of("files/" + fileName);
         // getParent는 파일이름.확장자이름이 나오기전까지의 폴더 경로
         try {
             // 폴더들이 존재하지 않으면 생성 mkdir / mkdirs 로 구분하지말고

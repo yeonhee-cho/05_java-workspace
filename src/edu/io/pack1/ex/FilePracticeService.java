@@ -19,8 +19,8 @@ public class FilePracticeService {
      */
     public void method1(){
         // 1. 경로 정의(상대 경로)
-        // java_basic 이라는 폴더를 기준으로 폴더 및 파일 생성
-        String path = "java_basic/my_logs"; // 폴더 명칭 맨 앞에 /가 붙지 않으면 현재 작업하고 있는 프로젝트 내에 폴더 경로로 인식
+        // 최상위 폴더를 기준으로 폴더 및 파일 생성
+        String path = "my_logs"; // 폴더 명칭 맨 앞에 /가 붙지 않으면 현재 작업하고 있는 프로젝트 내에 폴더 경로로 인식
         String fileName = "/access_log.log";
         
         // 2. File 객체 생성
@@ -67,8 +67,8 @@ public class FilePracticeService {
      */
     // 문제 2: 기존 디렉토리 목록 조회 및 유형 판별
     public void method2(){
-        // java_basic 폴더에서 src/edu/oop/method/ex 폴더까지 경로 설정
-        File logFolder = new File("java_basic/src/edu/oop/method/ex");
+        // 최상위 폴더에서 src/edu/oop/method/ex 폴더까지 경로 설정
+        File logFolder = new File("src/edu/oop/method/ex");
 
         // 2. 디렉토리 내부의 모든 파일 / 디렉토리 목록 가져오기
         File[] 파일들 = logFolder.listFiles();

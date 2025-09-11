@@ -15,7 +15,7 @@ public class FilePracticeRun2 {
             dirName = sc.nextLine().trim();
         } else {
             dirName = "";
-            System.out.println("최상위(java_basic)로 폴더 설정됩니다.");
+            System.out.println("최상위로 폴더 설정됩니다.");
         }
 
         System.out.print("내용을 확인할 파일이름 + 확장자를 입력하세요 : ");

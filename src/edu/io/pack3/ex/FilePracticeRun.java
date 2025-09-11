@@ -9,7 +9,7 @@ public class FilePracticeRun {
         Scanner sc = new Scanner(System.in);
         System.out.print("폴더를 입력하시겠습니까? (yes/no) : ");
         // 글자입력받고 공백없음 모두 소문자처리
-        // 없으면 기본 프로젝트 최상위(java_basic)로 폴더 설정
+        // 없으면 기본 프로젝트 최상위로 폴더 설정
         // yes이면 폴더 입력 후
         String choice = sc.nextLine().trim().toLowerCase();
         String dirName = "";
@@ -19,7 +19,7 @@ public class FilePracticeRun {
             dirName = sc.nextLine().trim();
         } else {
             dirName = "";
-            System.out.println("최상위(java_basic)로 폴더 설정됩니다.");
+            System.out.println("최상위로 폴더 설정됩니다.");
             // java-workspace이고 싶을 경우
         }
 
