@@ -20,5 +20,4 @@ public class 구글서비스 {
         로그인유무 = false;
         System.out.println(서비스이름 + "에 로그아웃 했습니다.");
     }
-
 }
