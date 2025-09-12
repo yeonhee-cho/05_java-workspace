@@ -14,14 +14,14 @@ public class FileManager {
 
     // 폴더 생성
     public void createFolders() {
-        // Files.createDirectories() 사용
-        // 데이터 폴더와 이미지 폴더 생성
         try {
+            // Files.createDirectories() 사용
+            // 데이터 폴더와 이미지 폴더 생성
+            // 생성 완료 메시지 출력
             Files.createDirectories(MEMBER_FILE.getParent());
             System.out.println(MEMBER_FILE.getParent() +  "폴더 생성 완료");
             Files.createDirectories(IMAGES_DIR.getParent());
             System.out.println(IMAGES_DIR.getParent() + "폴더 생성 완료");
-            // 생성 완료 메시지 출력
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

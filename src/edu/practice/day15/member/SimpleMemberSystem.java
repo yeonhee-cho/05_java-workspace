@@ -40,6 +40,8 @@ package edu.practice.day15.member;
  */
 public class SimpleMemberSystem {
     public static void main(String[] args) {
+        FileManager fm = new FileManager();
+        fm.createFolders();
         try {
             // MenuSystem 객체 생성 및 start() 호출
         } catch (Exception e) {
