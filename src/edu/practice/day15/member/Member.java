@@ -21,11 +21,27 @@ public class Member {
     public Member(String id, String password, String name, String email, String phone, String imageUrl) {
         // joinDate는 getCurrentTime() 메서드로 설정
         // lastLogin은 빈 문자열("")로 설정
+        this.id = id;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.imageUrl = imageUrl;
+        joinDate = getCurrentTime();
+        lastLogin = "";
     }
 
     // 파일에서 읽어올 때 생성자 (8개 매개변수)
     public Member(String id, String password, String name, String email, String phone, String imageUrl, String joinDate, String lastLogin) {
         // 모든 필드 초기화
+        this.id = id;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.imageUrl = imageUrl;
+        this.joinDate = joinDate;
+        this.lastLogin = lastLogin;
     }
 
     // 현재 시간 반환 (private)
@@ -48,8 +64,48 @@ public class Member {
         return null;
     }
 
-    // toString() 오버라이드 - 회원 정보 보기좋게 출력
-    // 모든 getter 메서드들
-    // setLastLogin() 메서드만 (다른 setter는 없음)
+    // toString() 오버라이드 - 회원 정보 보기 좋게 출력
+    @Override
+    public String toString() {
+        return "멤버 {" +
+                "id='" + id + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", joinDate='" + joinDate + '\'' +
+                ", lastLogin='" + lastLogin + '\'' +
+                '}';
+    }
 
+    // 모든 getter 메서드들
+    public String getId() {
+        return id;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public String getName() {
+        return name;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public String getJoinDate() {
+        return joinDate;
+    }
+    public String getLastLogin() {
+        return lastLogin;
+    }
+    // setLastLogin() 메서드만 (다른 setter는 없음)
+    public void setLastLogin(String lastLogin) {
+        this.lastLogin = lastLogin;
+    }
 }
