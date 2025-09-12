@@ -1,5 +1,7 @@
 package edu.practice.day15.member;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -14,7 +16,15 @@ public class FileManager {
     public void createFolders() {
         // Files.createDirectories() 사용
         // 데이터 폴더와 이미지 폴더 생성
-        // 생성 완료 메시지 출력
+        try {
+            Files.createDirectories(MEMBER_FILE.getParent());
+            System.out.println(MEMBER_FILE.getParent() +  "폴더 생성 완료");
+            Files.createDirectories(IMAGES_DIR.getParent());
+            System.out.println(IMAGES_DIR.getParent() + "폴더 생성 완료");
+            // 생성 완료 메시지 출력
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     // 회원 정보 저장 (추가)
