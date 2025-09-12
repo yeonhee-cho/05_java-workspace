@@ -12,18 +12,18 @@ public class 다수의직원정보작성후실행 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
-        System.out.println("직원 정보를 입력하세요.(종료를 입력하면 파일이 생성됩니다. : ");
+        System.out.println("직원 정보를 입력하세요.(종료를 입력하면 파일이 생성됩니다.)");
 
         while (true) {
-            System.out.println("직원이름 : ");
+            System.out.print("직원이름 : ");
             String name = sc.nextLine();
 
             if(name.equals("종료")) {
                 break; // 기능 중지
             }
-            System.out.println("부서 : ");
+            System.out.print("부서 : ");
             String 부서 = sc.nextLine();
-            System.out.println("직급 : ");
+            System.out.print("직급 : ");
             String 직급 = sc.nextLine();
 
             sb.append("이름 : " + name + ", 부서 : " +  부서 + ", 직급 : " + 직급 + "\n");
